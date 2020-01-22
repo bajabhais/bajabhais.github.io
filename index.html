@@ -1,0 +1,532 @@
+<html>
+  <head>
+  <!--https://googledrive.com/host/-->
+    <title>Baja Bhais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-default navbar-fixed-top" style="background:linear-gradient(#0f2027,#203a43,#2c5364)!important;">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="index" style="color:white;margin-top:0px!important"><img src="image/logo_white.png" style="margin-top:-2px!important;height:30px;width:auto;"></a>
+              </div>
+              <style>
+                .nav>li>a,.nav>li>a>i{
+                  color:white!important;
+                }
+              </style>
+              <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="legacy.html"><i class="fa fa-flag-checkered"></i> Legacy</a></li>
+                  <li><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                  <li><a href="specs.html"><i class="fa fa-gears"></i> Specs</a></li>
+                  <li><a href="gallery.html"><i class="fa fa-photo"></i> Gallery</a></li>
+                  <li><a href="sponsors.html"><i class="fa fa-handshake-o"></i> Sponsors</a></li>
+                  <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+              </ul>
+              </div>
+          </div>
+      </nav>
+    <style>
+      body{
+        font-family: ralewayRegular;
+      }
+      .fullWidthSlider{
+        width: 100%;
+        height: 100%;
+      }
+      
+      @keyframes fadeOut{
+          from{opacity:1;}
+          to{opacity: 0;}
+      }
+      @keyframes fadeIn{
+          from{opacity:0;}
+          to{opacity: 1;}
+      }
+      .header{
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+      .overlay{
+        background: rgb(0,0,0);
+        opacity: 0.5;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #myCarousel{
+        z-index: -2;
+      }
+      #logo{
+        height: 40%;
+        width:auto;
+        position: absolute;
+        top:30%;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+      }
+      #logo>img{
+        background: rgba(255,255,255,0.6);
+        height: 100%;
+        margin: auto;
+        padding: 20px;
+        box-shadow: black 0px 0px 20px;
+      }
+      @media only screen and (max-width: 767px){
+        .responsiveCover{
+          height: 100%;
+          width: auto;
+        }
+        .responsiveClipper{
+          height: 100%;
+          width: 100%!important;
+          overflow-x: hidden;
+        }
+        #logo{
+          position: absolute;
+          width: 100%;
+          top:40%;
+        }
+        #logo>img{
+          height: auto;
+          width:100%;
+          margin: auto;
+          padding: 20px;
+        } 
+      }
+      @media only screen and (min-width: 767px){
+        .responsiveCover{
+          width: 100%;
+          height: auto;
+        }
+        .responsiveClipper{
+          width: 100%;
+          height: 100%!important;
+          overflow-y: hidden;
+        }
+      }
+      #myCarousel{
+      }
+    </style><!--
+    <script>
+      $(document).ready(function(){
+        $(".fullWidthSlider>.active").css()
+      })
+    </script>
+    <div class="container-fluid fullWidthSlider">
+      <div class="fulllWidthSlider-item active" data-slideNo="0" data-fadeTo="1" data-loc="image/slider/1.jpg"></div>
+      <div class="fulllWidthSlider-item" data-slideNo="1" data-fadeTo="2" data-loc="image/slider/1.jpg"></div>
+      <div class="fulllWidthSlider-item" data-slideNo="2" data-fadeTo="0" data-loc="image/slider/1.jpg"></div>
+    </div>-->
+    <style>
+      #mobileWall{
+        display: none;
+        
+      }
+      @media only screen and (max-width: 767px){
+        #myCarousel{
+          display:none!important;
+        }
+        #mobileWall{
+          display: block!important;
+          position: fixed;
+          z-index: -2;
+        }
+        hr{
+          display: none;
+        }
+        .mobile{
+          height: 100%;
+          overflow-x: hidden;
+        }
+      }
+    </style>
+    <style>
+      .loader{
+        z-index: 1000;
+        background: rgba(0,0,0,0.9);
+        position: fixed;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .loader>img{
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        position: relative;
+        top:35%;
+        animation: loaderAnime 2.5s infinite;
+      }
+      @keyframes fadeOut {
+          0%   {opacity: 1;}
+          100% {opacity: 0;}
+      }
+      @keyframes loaderAnime {
+          0%   {transform: scale(1);opacity: 0.3}
+          50% {transform: scale(1.5);opacity: 1}
+          100% {transform: scale(1);opacity: 0.3}
+      }
+    </style>
+    <div class="loader">
+      <img src="image/logo_1.png" class="img-responsive">
+    </div>
+    <script>
+      setTimeout(function(){
+        $(".loader").css("animation","fadeOut 1s");
+        $(".loader").css("opacity","0");
+      },5000)
+      
+    </script>
+    <div class="header">
+        <div id="logo">
+          <img src="image/logo.png">
+        </div>
+        <div class="overlay"></div>
+        <div id="mobileWall">
+          <img src="image/slider/mobile/1.jpg" class="mobile">
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active responsiveClipper">
+                <img src="image/slider/1.jpg" class="responsiveCover">
+              </div>
+          
+              <div class="item responsiveClipper">
+                <img src="image/slider/2.jpg" class="responsiveCover">
+              </div>
+          
+              <div class="item responsiveClipper">
+                <img src="image/slider/3.jpg" class="responsiveCover">
+              </div>
+
+              <div class="item responsiveClipper">
+                <img src="image/slider/4.jpg" class="responsiveCover">
+              </div>
+            </div>
+          </div>
+    </div>
+    <!--
+    <div class="container-fluid" id="navbar">
+      <div class="row">
+        <div class="col-xs-2 col-sm-12 col-md-12">
+            <div id="navbar-button" data-status="0">
+              <i class="fa fa-reorder"></i>
+            </div>
+            <div id="navbar-items">
+              <a href="contact.html"><h4 style="font-size:25px;"><i class="fa fa-facebook-f"></i> .</h4></a>
+              <a href="contact.html"><h4 style="font-size:25px;"><i class="fa fa-twitter"></i> .</h4></a>
+              <a href="contact.html"><h4 style="font-size:25px;"><i class="fa fa-linkedin"></i> .</h4></a>
+              <a href="contact.html"><h4 style="font-size:25px;"><i class="fa fa-instagram"></i> .</h4></a>
+            </div>
+        </div>
+      </div>
+    </div>-->
+    <style>
+      p{
+        font-size: 120%;
+        text-indent: 20px;
+        line-height: 150%;
+        letter-spacing: 2px;
+        margin: 10px 0px 15px 0px;
+        text-align: justify
+      }
+      #container1{
+        width: 100%;
+        position: relative;
+        display: block;
+        left: 0;
+        padding-bottom: 40px;
+        background: white;
+      }
+      @font-face
+      {
+          font-family:airborneB;
+          src:url(css/fonts/airborneB.ttf);
+      }
+      @font-face
+      {
+          font-family:airborne;
+          src:url(css/fonts/airborne.ttf);
+      }
+      .title{
+        margin-top:20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 500%;
+        font-family:airborne!important;
+        font-weight: lighter;
+      }
+      .subTitle{
+        margin-top:20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 300%;
+      }
+      .topLine{
+        border-top: 2px solid red;
+      }
+      .underLine{
+        border-bottom: 2px solid red;
+      }
+      .col>p{
+        margin:5px 5px 5px 5px;
+      }
+      .col{
+        border:0px cyan solid;
+      }
+      @media only screen and (max-width: 767px){
+        .title{
+          font-size: 275%;
+        }
+        .title>img{
+          height:0.75em!important;
+        }
+        .subTitle{
+          font-size: 200%;
+        }
+        #container1,#container1a,#container2{
+          background: white;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+    <div id="container1" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title"><img src="image/flag.png" style="height:1em;margin-right:20px;"><span class="topLine">B</span>aja Bhai<span class="underLine">s</span><img src="image/flag.png" style="height:1em;margin-left:20px;"></h1>    
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col">
+            <img src="image/slider/1.jpg" style="width:98%;" class="img-responsive">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col"> 
+            <p>BAJA BHAIS is a team of undergraduate students from PSG College of Technology, Coimbatore. The team designs, builds and races an All-Terrain vehicle which participates in annual events such as Baja SAE India and Enduro Student India. With NATRIP facility, Baja SAE India is conducted in Pithampur, Madhya Pradesh. Enduro Student India is organized by SplitSecond Engineering & Performance Pvt Ltd and takes place in Eachanari, Coimbatore. Innovation and perseverance of our team enriched with practical skills, have always paved our way in the quest to perfect our ATV design. Dreaming of building the best ATV in the country, we are constantly looking for new avenues like lighter materials and advanced manufacturing processes to maximize reliability and performance.</p>
+            <!--<p>BAJA BHAIS represents PSG College of Technology in SAE BAJA event conducted annually in NATRIP facility, Pithampur, Madhya Pradesh.</p>
+            <p>Innovation and perseverance of our team enriched with practical skills, have always paved our way in the quest to perfect our ATV design.</p>
+            <p>Dreaming of building the best ATV in the country, we are constantly looking for new avenues like lighter materials and advanced manufacturing processes to maximize performance and durability.</p>
+            --></div>
+        </div>   
+    </div>
+    <style>
+      #container2{
+        width: 100%;
+        position:relative;
+        display: block;
+      }
+      .img-responsive{
+        width: 100%;
+      }
+      .card{
+        text-align: center;
+        width:97%!important;
+        margin:0px 1% 0px 1%;
+        border: none;
+      }
+      .card>img{
+        width:50%;
+        margin: auto;
+      }
+      .img-circle{
+        border-radius: 50%;
+      }
+      .card>h1{
+        border-bottom: 1px orange solid;
+        display: inline-block;
+      }
+    </style>
+    <hr style="height:1px;background:linear-gradient(to right,rgb(255,255,255),rgb(255,0,0),rgb(0,0,0),rgb(255,0,0),rgb(255,255,255))">
+    <div id="container1a" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col">
+            <h2 class="subTitle"><span class="topLine">Our</span> <span class="underLine">Vision</span></h2>
+            <div class="col-sm-2 col-md-2"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col">
+              <div class="card">
+                <img src="image/reliability.jpg" class="img-responsive img-circle">
+                <h1>Reliability</h1>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col">
+              <div class="card">
+                <img src="image/kanba.jpg" class="img-responsive img-circle">
+                <h1>Kanban</h1>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col">
+          </div>
+        </div>   
+    </div>
+    </div>
+    <hr style="height:1px;background:linear-gradient(to right,rgb(255,255,255),rgb(255,0,0),rgb(0,0,0),rgb(255,0,0),rgb(255,255,255))">
+    <!--<style>
+      .bgreq{
+        background-size: cover;
+        position: relative;
+      }
+      .bgreq #container1a{
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 100;
+      }
+      .bgreq .col{
+        background: white;
+      }
+      .bgreq .overlay{
+        background-size: cover;
+        position: relative;
+      }
+
+    </style>-->
+    <div class="bgreq">
+      <div class="overlay"></div>
+      <div id="container1a" class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col" style="margin-bottom:10px;margin-top:50px;">
+            <h2 class="subTitle"><span class="topLine">PSG</span>&nbsp<span class="underLine">Tech</span></h2>
+            <p>PSG College of Technology is an autonomous, government aided engineering college in Peelamedu, Coimbatore. It is affiliated to Anna University, Chennai. The college offers a total of 48 full-time and part-time programs in Science, Engineering and Management at undergraduate and postgraduate levels. Holding 5th in Tamilnadu and 29th in All-India ranking, PSG College of Technology aims to provide world-class Engineering Education, Foster Research and Development. The college was founded in 1951 by Dr.G.R.Damodaran, who served as first Principal of the college. It is one of the many educational institutions nurtured by PSG & Sons Charities Trust</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="background:white">
+        <div class="row">  
+            <div class="col-xs-12 col-sm-12 col-md-12 col" style="margin-top:50px;"> 
+              <h2 class="subTitle"><span class="topLine">Baja</span>&nbsp<span class="underLine">SAE</span></h2>
+              <p>The BAJA SAE Series® is an event for the undergraduate engineering students, organized globally by the Society of Automotive Engineers, USA. The event originated in the name of Mini - BAJA, in the year 1976 at University of Carolina. Since then, the event has spanned across six countries – USA, Mexico, South Africa, Korea, Brazil and India. The BAJA SAE tasks the students to design, fabricate and validate a single seater four - wheeled off road vehicle to take part in series of events spread over a course of 3 days that test the vehicle for the sound engineering practices that have gone into it, the agility of the vehicle in terms of gradability, speed, acceleration and manoeuvrability characteristics and finally its ability to endure that back breaking durability test.</p>
+            </div>
+          </div>   
+      </div>
+    </div>
+    <br><br>
+    <hr style="height:1px;background:linear-gradient(to right,rgb(255,255,255),rgb(255,0,0),rgb(0,0,0),rgb(255,0,0),rgb(255,255,255))">
+    <div id="container2" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title"><span class="topLine">T</span>ask<span class="underLine">s</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 col">
+          <div class="card">
+            <img src="image/design.jpg" class="img-responsive img-circle">
+            <h1>Design</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col">
+          <div class="card">
+            <img src="image/analysis.jpg" class="img-responsive img-circle">
+            <h1>Analysis</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col">
+          <div class="card">
+            <img src="image/welding.jpg" class="img-responsive img-circle">
+            <h1>Fabricate</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col">
+          <div class="card">
+            <img src="image/validation.jpg" class="img-responsive img-circle">
+            <h1>Validate</h1>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <style>
+      .container-fluid{
+        width:100%;
+      }
+      #container4{
+        position:relative;
+        background: radial-gradient(rgb(255, 255, 255),rgb(212, 212, 212));
+        background: linear-gradient(to bottom,rgb(212,212,212),rgb(255,255,255));
+        height: 50%;
+      }
+    </style>
+    
+    <style>
+
+      .lastfoot{
+        background: black!important;
+        color:white;
+      }
+      .footdiv a{
+        color:white!important;
+      }
+      .number{
+        font-family: sans-serif;
+      }
+      .footdiv span{
+        color:white!important;
+      }
+    </style>
+
+    <div clas="container-fluid lastfoot" style="width:100%;padding-bottom:20px;background:black;color:white!important;">
+      <div class="row">
+        <div class="col-sm-1 col-md-1"></div>
+        <div class="col-xs-12 col-md-10 col-sm-10 footdiv">
+          <div class="col-xs-12 col-md-3 col-sm-3">
+            <h1>More Info</h1>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="index.html"> Home</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="contact.html"> Contact Us</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="psgtech.edu"> PSG Tech</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a> Baja SAE</a></h5>
+          </div>
+          <div class="col-xs-12 col-md-3 col-sm-3">
+            <h1>Other Links</h1>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="legacy.html"> Legacy</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="team.html"> Team</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="gallery.html"> Gallery</a></h5>
+            <h5><span class="glyphicon glyphicon-arrow-right"></span><a href="sponsors.html"> Sponsors</a></h5>
+          </div>
+          <div class="col-xs-12 col-md-3 col-sm-3">
+            <h1>Contact Info</h1>
+            <div class="row">
+              <div class="col-xs-2"><h5><span class="glyphicon glyphicon-globe" style="font-size:1.5em"></span></h5></div>
+              <div class="col-xs-10"><h5><a> PSG College of Technology<br>Coimbatore, IN</a></h5></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2"><h5><span class="glyphicon glyphicon-phone-alt" style="font-size:1.5em"></span></h5></div>
+              <div class="col-xs-10"><h5><a class="number"> +91 9865722123<br>+91 9080898105</a></h5></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2"><h5><span class="glyphicon glyphicon-envelope" style="font-size:1.5em"></span></h5></div>
+              <div class="col-xs-10"><h5><a> teambajabhais@gmail.com<br>murugeshmasss@gmail.com</a></h5></div>
+            </div>
+            
+          </div>
+          <div class="col-xs-12 col-md-3 col-sm-3">
+            <img src="image/logo_white.png" class="img-responsive" style="margin-top:50px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h4>&copy 2018 Baja Bhais - PSG Motorsport. All rights reserved | Design by <span class="fRed">Baja Bhais</span></h4>
+            </div>
+        </div>
+    </div>
+      </body>
+</html>

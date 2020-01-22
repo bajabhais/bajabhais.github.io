@@ -1,0 +1,663 @@
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Baja Bhais</title>
+      <title>Baja Bhais</title>
+      <script src="js/jquery-3.3.1.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hover.css">
+    </head>
+    <body>
+      <style>
+        #logo{
+          height: 40%;
+          width:auto;
+          position: absolute;
+          top:30%;
+          width: 100%;
+          text-align: center;
+        }
+        #logo>img{
+          background: rgba(255,255,255,0.6);
+          height: 100%;
+          margin: auto;
+          padding: 20px;
+          box-shadow: black 0px 0px 20px;
+        }
+        @media only screen and (max-width: 767px){
+          .responsiveCover{
+            height: 100%;
+            width: auto;
+          }
+          .responsiveClipper{
+            height: 100%;
+            width: 100%!important;
+            overflow-x: hidden;
+          }
+          #logo{
+            position: absolute;
+            width: 100%;
+            top:40%;
+          }
+          #logo>img{
+            height: auto;
+            width:100%;
+            margin: auto;
+            padding: 20px;
+          } 
+        }
+        @media only screen and (min-width: 767px){
+          .responsiveCover{
+            width: 100%;
+            height: auto;
+          }
+          .responsiveClipper{
+            width: 100%;
+            height: 100%!important;
+            overflow-y: hidden;
+          }
+        }
+      </style><!--
+      <script>
+        $(document).ready(function(){
+          $(".fullWidthSlider>.active").css()
+        })
+      </script>
+      <div class="container-fluid fullWidthSlider">
+        <div class="fulllWidthSlider-item active" data-slideNo="0" data-fadeTo="1" data-loc="image/slider/1.jpg"></div>
+        <div class="fulllWidthSlider-item" data-slideNo="1" data-fadeTo="2" data-loc="image/slider/1.jpg"></div>
+        <div class="fulllWidthSlider-item" data-slideNo="2" data-fadeTo="0" data-loc="image/slider/1.jpg"></div>
+      </div>-->
+      <style>
+        
+      </style>
+      <script>
+        $(document).ready(function(){
+           
+          $("#navbar-button").click(function(){
+            if($("#navbar-button").attr("data-status")=="0")
+            {
+              $("#navbar-items").css("opacity","1");
+              $("#navbar-button").attr("data-status","1");
+            }
+            else{
+              $("#navbar-items").css("opacity","0");
+              $("#navbar-button").attr("data-status","0");
+            }
+          })
+        })
+      </script>
+      <nav class="navbar navbar-default navbar-fixed-top" style="background:linear-gradient(#0f2027,#203a43,#2c5364)!important;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index" style="color:white">Baja Bhais</a>
+            </div>
+            <style>
+              .nav>li>a,.nav>li>a>i{
+                color:white!important;
+              }
+            </style>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="legacy.html"><i class="fa fa-flag-checkered"></i> Legacy</a></li>
+                <li class="active"><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                <li><a href="specs.html"><i class="fa fa-gears"></i> Specs</a></li>
+                <li><a href="gallery.html"><i class="fa fa-photo"></i> Gallery</a></li>
+                <li><a href="sponsors.html"><i class="fa fa-handshake-o"></i> Sponsors</a></li>
+                <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+      <style>
+        p{
+          font-size: 120%;
+          text-indent: 20px;
+          line-height: 150%;
+          letter-spacing: 2px;
+          margin: 10px 0px 15px 0px;
+          text-align: justify
+        }
+        #container1{
+          width: 100%;
+          position: relative;
+          display: block;
+          left: 0;
+          padding-bottom: 40px;
+          margin-top: 60px;
+        }
+        .title{
+          margin-top:20px;
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 500%;
+          color: white;
+        }
+        .topLine{
+          border-top: 2px solid red;
+        }
+        .underLine{
+          border-bottom: 2px solid red;
+        }
+        .col>p{
+          margin:5px 5px 5px 5px;
+        }
+        .col{
+          margin:0px!important;
+          padding:0px!important;
+          border: 0px cyan solid;
+        }
+        @media only screen and (max-width: 767px){
+          .title{
+            font-size: 300%;
+          }
+        }
+      </style>
+      <style>
+            #container2{
+              width: 100%;
+              position:relative;
+              display: block;
+            }
+            .img-responsive{
+              width: 100%;
+            }
+            .card{
+                background: black;
+                height: 90%;
+                text-align: center;
+                width:99%!important;
+                margin:5px 0.5% 5px 0.5%;
+                border: none;
+                padding-bottom: 20px;
+                transition:ease 1s;
+            }
+            .card>img{
+              width:50%;
+              margin: auto;
+            }
+            .card>h1{
+              color:rgb(255, 208, 0);
+              display: inline-block;
+              font-family: lato;
+              text-transform: uppercase;
+              padding-top: 20px;
+              font-size: 200%;
+            }
+            .card>h3{
+                font-family:renner;
+                color: white;
+                font-size:150%;
+            }
+            .card:hover{
+                cursor: pointer;
+            }
+            .superScript{
+                text-transform:
+            }
+            .card{
+                
+            }
+            #bg{
+                background: url(image/slider/2.jpg);
+                position: fixed;
+                top:0;
+                background-size: cover;
+                width: 100%;
+                height: 100%!important;
+                z-index: -1;
+            }
+            .overlay{
+                background: rgba(0,0,0,1);
+                opacity: 0.5;
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            .titleContainer{
+                background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0))
+            }
+            .card:hover{
+                background: rgba(0,0,0,0.1);
+                background: rgba(255, 0, 0, 0.1);
+                transition: 0.5s;
+            }
+          </style>
+          <script>
+              $(document).ready(function(){
+                $(".card").addClass("hvr-grow");
+              })
+            </script>
+    <div class="container-fluid">
+            <div></div>
+    </div>
+    <style>
+        #container1 .titleContainer{
+            background: none!important;
+        }
+        #container1 .title{
+            color: black;
+        }
+        .subTitle{
+            font-family: timeless;
+            text-align: center;
+            border-bottom: 1.5px solid orangered;
+            border-top: 2.5px solid orangered;
+            display: inline-block;
+        }
+        .subTitleContainer
+        {
+            text-align: center;
+        }
+        .specs ul{
+            list-style: none;
+            text-indent: 0px;
+            text-align: left!important;
+            padding: 0;
+        }
+        .subTitleContainer>h3{
+            text-decoration: underline;
+            text-decoration-color: orange;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .subSubTitleContainer{
+            width:100%;
+            text-align: center;
+        }
+        .subSubTitleContainer>h3{
+            border-bottom: 1.5px orange solid;
+            display: inline-block;
+        }
+        .col-spec-container h5{
+            font-size: 115%;
+            margin-left: 15px;
+            margin-right:  15px;
+        }   
+        .col-spec{
+        }
+        #container1 .img-responsive{
+            margin-bottom: 20px;
+        }
+        .teamCard{
+            font-family: ralewayRegular!important;
+            margin-bottom: 20px;
+        }
+        .teamCard>img{
+            width: 60%;
+            margin: auto;
+        }
+        .teamCard>h3,.teamCard>h4{
+            text-align: center;
+        }
+        .teamCard>span{
+          font-size: 2em;
+          margin: auto;
+        }
+        @media only screen and (max-width: 767px){
+            .teamCard>img{
+                width:80%;
+            }
+        }
+    </style>
+    
+    <div class="container-fluid" id="container1">
+        <div class="row" style="margin-bottom:30px;">
+            <div class="col-xs-12">
+                <h1 class="title"><span class="topLine">T</span>ea<span class="underLine">m</span></h1>    
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" style="margin-bottom:20px;">
+            <h1 style="text-align:center"><span class="underline">Faculty Advisors</span></h1>
+          </div>
+          
+            <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/neelakrishnan.jpg" class="img-responsive img-circle">
+                <h3>Dr. S. Neelakrishnan</h3>
+                <h4>Head of the Department</h4>
+                <h4>Department of Automobile Engineering</h4>
+                <br>
+                
+            </div>
+            
+            <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/ravichandran.jpg" class="img-responsive img-circle">
+                <h3>Mr. R. Ravichandran</h3>
+                <h4>Associate Professor,</h4>
+                <h4>Department of Automobile Engineering</h4>
+                <br>
+                
+            </div>
+            <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/bharathimohan.jpg" class="img-responsive img-circle">
+                <h3>Mr. M. P. Bharathi Mohan</h3>
+                <h4>Associate Professor (Sr), </h4>
+                <h4>Department of Automobile Engineering</h4>
+                <br>
+                
+            </div>
+            <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/benjamin.jpg" class="img-responsive img-circle">
+                <h3>Mr. Benjamin Shiloh Davidson</h3>
+                <h4>Associate Professor (Sr), </h4>
+                <h4>Department of Automobile Engineering</h4>
+                
+            </div>
+        </div>
+        <style>
+            .teamCard>center>a>img{
+                display: inline;
+                width:30px;
+                margin-top:10px;
+                margin-right:20px;
+            }
+        </style>
+        <div class="row">
+            <div class="col-xs-12" style="margin-bottom:20px;">
+              <h1 style="text-align:center"><span class="underline">Team 2018-19</span></h1>
+            </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/murugesh.jpg" class="img-responsive img-circle">
+                <h3>MURUGESH M</h3>
+                <h4>Captain</h4>
+                <h4>Powertrain Lead</h4>
+                <center>
+                    <a href="https://www.facebook.com/murugesh.bheem"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                    <a href="https://www.linkedin.com/in/murugesh-m-1a4643b6/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                    <a href="https://www.instagram.com/murugesh98/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                </center>
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/naveen.jpg" class="img-responsive img-circle">
+                <h3>NAVEEN RAJ K</h3>
+                <h4>Vice Captain</h4>
+                <h4>Brakes</h4>
+                <center>
+                    <a href="https://www.facebook.com/naveenrajtheboss"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                    <a href="https://www.linkedin.com/in/naveen-raj-909849118/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                    <a href="https://www.instagram.com/pure_hearted_stranger/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                </center>
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/abishek.jpg" class="img-responsive img-circle">
+                  <h3>ABISHEK M</h3>
+                  <h4>Manager</h4>
+                  <h4>Driver</h4>
+                  <center>
+                        <a href="https://www.facebook.com/abishek.sekar.50"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/abishek-sekar-380b99118/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/shek_97/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/vignesh.jpg" class="img-responsive img-circle">
+                  <h3>VIGNESH G</h3>
+                  <h4>Treasurer</h4>
+                  <h4>Powertrain</h4>
+                  <center>
+                        <a href="https://www.facebook.com/profile.php?id=100009213208803"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/vignesh-g-66b22111b/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              </div>
+              <div class="row">
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/mathesh.jpg" class="img-responsive img-circle">
+                  <h3>MATHESWARA PRABHU K</h3>
+                  <h4>Dynamics Lead</h4>
+                  <center>
+                        <a href="https://www.facebook.com/profile.php?id=100009698136531"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/matheswara-prabhu-k-866237163/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/pandiyarajan.jpg" class="img-responsive img-circle">
+                  <h3>PANDIYARAJAN R</h3>
+                  <h4>Roll Cage Lead</h4>
+                  <center>
+                        <a href="https://www.facebook.com/profile.php?id=100009469534925"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/pandiyarajan-rajaguru-80a632147/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/pandiyarajan_rajaguru/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/ramesh.jpg" class="img-responsive img-circle">
+                  <h3>RAMESH S</h3>
+                  <h4>Brakes lead</h4>
+                  <center>
+                        <a href="https://www.facebook.com/sakthi.ramesh.754"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/arunpandiyan.jpg" class="img-responsive img-circle">
+                  <h3>ARUN PANDIAN J</h3>
+                  <h4>Dynamics / Welding</h4>
+                  <center>
+                        <a href="https://www.facebook.com/arun.pandian.142892"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/arunkd_02/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              </div>
+              <div class="row">
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/aswin.jpg" class="img-responsive img-circle">
+                  <h3>ASWIN KUMAR S</h3>
+                  <h4>Dynamics</h4>
+                  <center>
+                        <a href="https://www.facebook.com/aswin.kumar.50364"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/kumar-aswin/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/aswin_the_prince/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/rajakumar.jpg" class="img-responsive img-circle">
+                  <h3>RAJAKUMAR D</h3>
+                  <h4>Manufacturing lead</h4>
+                  <center>
+                        <a href="https://www.facebook.com/kumar.d.37017"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/rajakumar-d-979a5b166/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/sriram.jpg" class="img-responsive img-circle">
+                  <h3>SRIRAM R</h3>
+                  <h4>Ergonomics / Marketing</h4>
+                  <center>
+                        <a href=""><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/pradeep.jpg" class="img-responsive img-circle">
+                  <h3>PRADEEP M</h3>
+                  <h4>Brakes / CAE</h4>
+                  <center>
+                        <a href="https://www.facebook.com/m.v.deepu31"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/m.v.deepu31/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              </div>
+              <div class="row">
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/david.jpg" class="img-responsive img-circle">
+                  <h3>NITHYANANDH DAVID X</h3>
+                  <h4>Electrical Lead</h4>
+                  <center>
+                        <a href="https://www.facebook.com/david.xavier321"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.linkedin.com/in/david-xavier-340a56134/"><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/david_1504x98/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/gopiprakash.jpg" class="img-responsive img-circle">
+                  <h3>GOPIPRAKASH D</h3>
+                  <h4>Dynamics</h4>
+                  <center>
+                        <a href="https://www.facebook.com/gopi.sathya.921"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/akhilselvan.jpg" class="img-responsive img-circle">
+                  <h3>AKHIL SELVAN R</h3>
+                  <h4>Dynamics</h4>
+                  <center>
+                        <a href="https://www.facebook.com/akhilselvan.rajendran"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/navinkumar.jpg" class="img-responsive img-circle">
+                  <h3>NAVIN KUMAR M</h3>
+                  <h4>Dynamics</h4>
+                  <center>
+                        <a href="https://www.facebook.com/navin.rock.3150"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/navin_rockstar/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              </div>
+              <div class="row">
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/sanjeevi.jpg" class="img-responsive img-circle">
+                  <h3>SANJEEVI N</h3>
+                  <h4>Powertrain</h4>
+                  <center>
+                        <a href="https://www.facebook.com/sanjeevi.nagaraj"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/sanjeevi_nagaraj/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/jassim.jpg" class="img-responsive img-circle">
+                  <h3>MOHAMED JASSIM SHARAQ</h3>
+                  <h4>Powertrain</h4>
+                  <center>
+                        <a href="https://www.facebook.com/jassim.sharaq"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/prem.jpg" class="img-responsive img-circle">
+                  <h3>PREMKUMAR P</h3>
+                  <h4>Roll Cage</h4>
+                  <center>
+                        <a href="https://www.facebook.com/profile.php?id=100004634281574"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/p.r.e.m.k.u.m.a.r/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                <img src="image/team/nithish.jpg" class="img-responsive img-circle">
+                <h3>NITHISH C</h3>
+                <h4>Roll Cage</h4>
+                <center>
+                      <a href="https://www.facebook.com/nithish.chandrasekaran.9"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                      <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                      <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                  </center>
+  
+            </div>
+            </div>
+            <div class="row">
+              
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/rahul.jpg" class="img-responsive img-circle">
+                  <h3>RAGUL PRASATH A</h3>
+                  <h4>Brakes</h4>
+                  <center>
+                        <a href="https://www.facebook.com/ragul.prasath.33"><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/a_boy_next_door"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/vijayadithan.jpg" class="img-responsive img-circle">
+                  <h3>VIJAYADITHAN R</h3>
+                  <h4>Brakes</h4>
+                  <center>
+                        <a href=""><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+              <div class="teamCard col-xs-12 col-sm-3 col-md-3">
+                  <img src="image/team/puhazhmathi.jpg" class="img-responsive img-circle">
+                  <h3>PUHAZHMATHI M</h3>
+                  <h4>Electrical</h4>
+                  <center>
+                        <a href=""><img src="image/facebook.png" class="hvr-grow img-responsive"></a>
+                        <a href=""><img src="image/linkedin.png" class="hvr-grow img-responsive"></a>
+                        <a href="https://www.instagram.com/puhazhmathi/"><img src="image/instagram.png" class="hvr-grow img-responsive"></a>
+                    </center>
+    
+              </div>
+          </div>
+
+    </div>      
+      <style>
+        .container-fluid{
+          width:100%;
+        }
+        #container4{
+          position:relative;
+          background: radial-gradient(rgb(255, 255, 255),rgb(212, 212, 212));
+          background: linear-gradient(to bottom,rgb(212,212,212),rgb(255,255,255));
+          height: 50%;
+        }
+      </style>
+      <script>
+      </script>
+      <div class="container-fluid footer">
+          <div class="row">
+              <div class="col col-xs-12">
+                  <h4>&copy 2018 Baja Bhais - PSG Motorsport. All rights reserved | Design by <span class="fRed">Baja Bhais</span></h4>
+              </div>
+          </div>
+      </div>
+      </body>
+  </html>

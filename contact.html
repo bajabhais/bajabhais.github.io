@@ -1,0 +1,406 @@
+<html>
+        <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Baja Bhais</title>
+          <title>Baja Bhais</title>
+          <script src="js/jquery-3.3.1.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/hover.css">
+        </head>
+        <body>
+          <style>
+            #logo{
+              height: 40%;
+              width:auto;
+              position: absolute;
+              top:30%;
+              width: 100%;
+              text-align: center;
+            }
+            #logo>img{
+              background: rgba(255,255,255,0.6);
+              height: 100%;
+              margin: auto;
+              padding: 20px;
+              box-shadow: black 0px 0px 20px;
+            }
+            @media only screen and (max-width: 767px){
+              .responsiveCover{
+                height: 100%;
+                width: auto;
+              }
+              .responsiveClipper{
+                height: 100%;
+                width: 100%!important;
+                overflow-x: hidden;
+              }
+              #logo{
+                position: absolute;
+                width: 100%;
+                top:40%;
+              }
+              #logo>img{
+                height: auto;
+                width:100%;
+                margin: auto;
+                padding: 20px;
+              } 
+            }
+            @media only screen and (min-width: 767px){
+              .responsiveCover{
+                width: 100%;
+                height: auto;
+              }
+              .responsiveClipper{
+                width: 100%;
+                height: 100%!important;
+                overflow-y: hidden;
+              }
+            }
+          </style>
+          <script>
+            $(document).ready(function(){
+              $("#navbar-button").click(function(){
+                if($("#navbar-button").attr("data-status")=="0")
+                {
+                  $("#navbar-items").css("opacity","1");
+                  $("#navbar-button").attr("data-status","1");
+                }
+                else{
+                  $("#navbar-items").css("opacity","0");
+                  $("#navbar-button").attr("data-status","0");
+                }
+              })
+            })
+          </script>
+          <nav class="navbar navbar-default navbar-fixed-top" style="background:linear-gradient(#0f2027,#203a43,#2c5364)!important;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index" style="color:white">Baja Bhais</a>
+                </div>
+                <style>
+                    .nav>li>a,.nav>li>a>i{
+                    color:white!important;
+                    }
+                </style>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="legacy.html"><i class="fa fa-flag-checkered"></i> Legacy</a></li>
+                    <li><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                    <li><a href="specs.html"><i class="fa fa-gears"></i> Specs</a></li>
+                    <li><a href="gallery.html"><i class="fa fa-photo"></i> Gallery</a></li>
+                    <li><a href="sponsors.html"><i class="fa fa-handshake-o"></i> Sponsors</a></li>
+                    <li class="active"><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+          <style>
+            p{
+              font-size: 120%;
+              text-indent: 20px;
+              line-height: 150%;
+              letter-spacing: 2px;
+              margin: 10px 0px 15px 0px;
+              text-align: justify
+            }
+            #container1{
+                background: white;
+                margin-top: 25vh;
+              width: 100%;
+              position: relative;
+              display: block;
+              left: 0;
+              padding-bottom: 40px;
+              
+            }
+            .title{
+              margin-top:20px;
+              margin-bottom: 20px;
+              text-align: center;
+              font-size: 500%;
+              color: white;
+            }
+            .topLine{
+              border-top: 2px solid red;
+            }
+            .underLine{
+              border-bottom: 2px solid red;
+            }
+            .col>p{
+              margin:5px 5px 5px 5px;
+            }
+            .col{
+              margin:0px!important;
+              padding:0px!important;
+              border: 0px cyan solid;
+            }
+            @media only screen and (max-width: 767px){
+              .title{
+                font-size: 300%;
+              }
+            }
+          </style>
+          <style>
+                #container2{
+                  width: 100%;
+                  position:relative;
+                  display: block;
+                }
+                .img-responsive{
+                  width: 100%;
+                }
+                .card{
+                    background: black;
+                    height: 90%;
+                    text-align: center;
+                    width:99%!important;
+                    margin:5px 0.5% 5px 0.5%;
+                    border: none;
+                    padding-bottom: 20px;
+                    transition:ease 1s;
+                }
+                .card>img{
+                  width:50%;
+                  margin: auto;
+                }
+                .card>h1{
+                  color:rgb(255, 208, 0);
+                  display: inline-block;
+                  font-family: lato;
+                  text-transform: uppercase;
+                  padding-top: 20px;
+                  font-size: 200%;
+                }
+                .card>h3{
+                    font-family:renner;
+                    color: white;
+                    font-size:150%;
+                }
+                .card:hover{
+                    cursor: pointer;
+                }
+                .superScript{
+                    text-transform:
+                }
+                .card{
+                    
+                }
+                #bg{
+                    background: url(image/slider/2.jpg);
+                    position: fixed;
+                    top:0;
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%!important;
+                    z-index: -1;
+                }
+                .overlay{
+                    background: rgba(0,0,0,1);
+                    opacity: 0.5;
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+                .titleContainer{
+                    background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0))
+                }
+                .card:hover{
+                    background: rgba(0,0,0,0.1);
+                    background: rgba(255, 0, 0, 0.1);
+                    transition: 0.5s;
+                }
+              </style>
+              <script>
+                  $(document).ready(function(){
+                    $(".card").addClass("hvr-grow");
+                  })
+                </script>
+        <div class="container-fluid">
+                <div></div>
+        </div>
+        <style>
+            #container1 .titleContainer{
+                background: none!important;
+            }
+            #container1 .title{
+                color: black;
+            }
+            .subTitle{
+                font-family: timeless;
+                text-align: center;
+                border-bottom: 1.5px solid orangered;
+                border-top: 2.5px solid orangered;
+                display: inline-block;
+            }
+            .subTitleContainer
+            {
+                text-align: center;
+            }
+            .specs ul{
+                list-style: none;
+                text-indent: 0px;
+                text-align: left!important;
+                padding: 0;
+            }
+            .subTitleContainer>h3{
+                text-decoration: underline;
+                text-decoration-color: orange;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .subSubTitleContainer{
+                width:100%;
+                text-align: center;
+            }
+            .subSubTitleContainer>h3{
+                border-bottom: 1.5px orange solid;
+                display: inline-block;
+            }
+            .col-spec-container h5{
+                font-size: 115%;
+                margin-left: 15px;
+                margin-right:  15px;
+            }   
+            .col-spec{
+            }
+            #container1 .img-responsive{
+                margin-bottom: 20px;
+            }
+            .teamCard{
+                font-family: ralewayRegular!important;
+                margin-bottom: 20px;
+            }
+            .teamCard>img{
+                width: 60%;
+                margin: auto;
+            }
+            .teamCard>h3,.teamCard>h4{
+                text-align: center;
+            }
+            .teamCard>span{
+              font-size: 2em;
+              margin: auto;
+            }
+            @media only screen and (max-width: 767px){
+                .teamCard>img{
+                    width:80%;
+                }
+            }
+            .bg{
+                margin-top: 50px;
+                background: url('image/bg.jpg');
+                width: 100%;
+                height: 70vh;
+                background-size: cover;
+                background-position: right;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -50;
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="row" style="margin-top:60px;">
+                <div class="col-xs-12">
+                    <h1 class="title" style="color:black!important"><span class="topLine">B</span>e in touch with u<span class="underLine">s</span></h1>    
+                </div>
+            </div>
+        </div>
+                <div class="container-fluid">
+                        
+                        <div class="row" style="margin-bottom:15vh">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <center>
+                                    <h3 class="bold">Contact us</h3>
+                                    <span style="font-family:'Times New Roman', Times, serif;text-align:left" >
+                                        <div class="col-md-12 col-sm-12" style="margin-top:25%"></div>
+                                    <h4><span class="bold">Phone :</span> +91 9865722123</h4>
+                                    <h4><span class="bold">Email :</span> teambajabhais@gmail.com</h4>
+                                    <h4><span class="bold">Address :</span> PSG Motorsports Lab, PSG College of Technology, Coimbatore-641004</h4>
+                                </span>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.185646098312!2d76.99993861415172!3d11.024693957578135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8582f1435fa59%3A0x137d95bfd8909293!2sPSG+College+Of+Technology!5e0!3m2!1sen!2sin!4v1535042361383" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </center>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8">
+                                <center>    
+                                
+                                <div class="formDiv">
+                                        <form action="server.php?op=sendMail" method="POST">
+                                            <table style="width:100%;margin-top:50px;">
+                                                <tr>
+                                                    <td class="bold">Name</td>
+                                                    <td><input required type="text" name="mail" style="width:100%;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bold">Your e-mail</td>
+                                                    <td><input required type="text" name="mail" style="width:100%;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bold">Subject</td>
+                                                    <td><input type="text" name="subject" style="width:100%;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bold">Message</td>
+                                                    <td><textarea name="body" rows="10" style="height:200px;resize:none;overflow-y:scroll;width:100%;"></textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><br></td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td style="text-align:center"><button type="submit" class="btn-default btn" style="text-align:center;margin:auto">Send message</button></td>
+                                                </tr>
+            
+                                            </table>
+                                            
+                                        </form>
+                                </div>
+                            </center>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+          <style>
+            .container-fluid{
+              width:100%;
+            }
+            #container4{
+              position:relative;
+              background: radial-gradient(rgb(255, 255, 255),rgb(212, 212, 212));
+              background: linear-gradient(to bottom,rgb(212,212,212),rgb(255,255,255));
+              height: 50%;
+            }
+          </style>
+          <div class="container-fluid footer">
+              <div class="row">
+                  <div class="col col-xs-12">
+                      <h4>&copy 2018 Baja Bhais - PSG Motorsport. All rights reserved | Design by <span class="fRed">Baja Bhais</span></h4>
+                  </div>
+              </div>
+          </div>
+          </body>
+      </html>

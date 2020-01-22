@@ -1,0 +1,222 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+    font-family: ralewayRegular;
+  }
+.navbar{
+    background: black!important;
+}
+/*  #navbar{
+    height:50px;
+    width:100%;
+    padding-bottom: 50px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    z-index:500;
+    background: rgb(0, 0, 0);
+  }
+  #navbar-items>a>h4{
+    float: left;
+    margin:0px 6px 10px 6px;
+    padding: 15px;
+  }
+  #navbar-items>a{
+    text-decoration: none!important;
+    color: white!important;
+  }
+  .teamCard{
+    font-family: ralewayRegular!important;
+  }
+  #navbar-items .active{
+    background-color: red;
+  }
+  #navbar-button{
+    display: none;
+    padding-top:5px;
+    padding-right: 10px;
+  }
+  @media only screen and (min-width: 767px){
+    #navbar-items{
+      opacity: 1!important;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    #navbar{
+      z-index: 100;
+      background: rgb(0, 0, 0);
+    }
+    #navbar-items{  
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 60px;
+      opacity: 0;
+      height: 100vh;
+      text-align: center;
+      transition: 0.5s;
+      width: 100vw;
+      background: rgba(0,0,0,0.95);
+      z-index: -1;
+    }
+    #navbar-items>a{
+      display: block;
+    }
+    #navbar-items>a>h4{
+      float: none;
+      margin-bottom:5px!important; 
+    }
+    #navbar-items h4{
+        margin-left: 0px!important;
+    }
+    #navbar-button{
+      color: white;
+      display: block;
+      font-size: 36px;
+      position: fixed;
+      top:7px;
+      right: 10px;
+    }
+    #navbar-button:hover{
+      cursor: pointer;
+    }
+  }
+  .fa{
+    font-size: 75%;
+  }
+*/
+/*----------------------------------------------Nav bar ------------------------------------------------------------*/
+/*----------------------------------------------footer------------------------------*/
+.footer{
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-family: montserrat;
+}
+.footer h4{
+  font-size: 100%;
+}
+.fRed{
+    color: red;
+}
+/*----------------------------------------------footer------------------------------*/
+/*--------------------------------scrollbar---------------------*/
+::-webkit-scrollbar{
+    width:10px;
+    background: transparent;
+}
+::-webkit-scrollbar-track{
+    background: black;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: red;
+}
+/*--------------------------------scrollbar---------------------*/
+
+@font-face
+{
+    font-family: ralewayRegular;
+    src:url(fonts/ralewayRegular.ttf);
+}
+@font-face
+{
+    font-family: ralewayBold;
+    src:url(fonts/ralewayBold.ttf);
+}
+@font-face
+{
+    font-family: ralewayExtraBold;
+    src:url(fonts/ralewayExtraBold.ttf);
+}
+@font-face
+{
+    font-family: kaushanScript;
+    src:url(fonts/kaushanScript.otf);
+}
+@font-face
+{
+    font-family: agentOrange;
+    src:url(fonts/agentOrange.ttf);
+}
+@font-face
+{
+    font-family: montserrat;
+    src:url(fonts/Montserrat-Regular.otf);
+}
+@font-face
+{
+    font-family: oswald;
+    src:url(fonts/Oswald-Regular.ttf);
+}
+@font-face
+{
+    font-family: brooklyn;
+    src:url(fonts/brooklyn.otf);
+}
+@font-face
+{
+    font-family: karolina;
+    src:url(fonts/karolina.otf);
+}
+@font-face
+{
+    font-family:trench;
+    src:url(fonts/trench.ttf);
+}
+@font-face
+{
+    font-family:lato;
+    src:url(fonts/Lato-Medium.ttf);
+}
+@font-face
+{
+    font-family:sourceCodePro;
+    src:url(fonts/SourceCodePro-Medium.otf);
+}
+@font-face
+{
+    font-family:bebas;
+    src:url(fonts/bebas.ttf);
+}
+@font-face
+{
+    font-family:timeless;
+    src:url(fonts/timeless.ttf);
+}
+@font-face
+{
+    font-family:renner;
+    src:url(fonts/renner.ttf);
+}
+@font-face
+{
+    font-family:sextan;
+    src:url(fonts/sextan.ttf);
+}
+
+
+@font-face
+{
+    font-family:hervatica;
+    src:url(fonts/hervatica.ttf);
+}@font-face
+{
+    font-family:addcityboy;
+    src:url(fonts/addcityboy.ttf);
+}@font-face
+{
+    font-family:airborneB;
+    src:url(fonts/airborneB.ttf);
+}
+@font-face
+{
+    font-family:airborne;
+    src:url(fonts/airborne.ttf);
+}
+.navbar .active>a{
+    background: red!important;
+    color:white;
+}

@@ -1,0 +1,323 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Baja Bhais</title>
+      <title>Baja Bhais</title>
+      <script src="js/jquery-3.3.1.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hover.css">
+    </head>
+    <body>
+      <style>
+        #logo{
+          height: 40%;
+          width:auto;
+          position: absolute;
+          top:30%;
+          width: 100%;
+          text-align: center;
+        }
+        #logo>img{
+          background: rgba(255,255,255,0.6);
+          height: 100%;
+          margin: auto;
+          padding: 20px;
+          box-shadow: black 0px 0px 20px;
+        }
+        @media only screen and (max-width: 767px){
+          .responsiveCover{
+            height: 100%;
+            width: auto;
+          }
+          .responsiveClipper{
+            height: 100%;
+            width: 100%!important;
+            overflow-x: hidden;
+          }
+          #logo{
+            position: absolute;
+            width: 100%;
+            top:40%;
+          }
+          #logo>img{
+            height: auto;
+            width:100%;
+            margin: auto;
+            padding: 20px;
+          } 
+        }
+        @media only screen and (min-width: 767px){
+          .responsiveCover{
+            width: 100%;
+            height: auto;
+          }
+          .responsiveClipper{
+            width: 100%;
+            height: 100%!important;
+            overflow-y: hidden;
+          }
+        }
+      </style><!--
+      <script>
+        $(document).ready(function(){
+          $(".fullWidthSlider>.active").css()
+        })
+      </script>
+      <div class="container-fluid fullWidthSlider">
+        <div class="fulllWidthSlider-item active" data-slideNo="0" data-fadeTo="1" data-loc="image/slider/1.jpg"></div>
+        <div class="fulllWidthSlider-item" data-slideNo="1" data-fadeTo="2" data-loc="image/slider/1.jpg"></div>
+        <div class="fulllWidthSlider-item" data-slideNo="2" data-fadeTo="0" data-loc="image/slider/1.jpg"></div>
+      </div>-->
+      <style>
+        
+      </style>
+      <nav class="navbar navbar-default navbar-fixed-top" style="background:linear-gradient(#0f2027,#203a43,#2c5364)!important;">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="index" style="color:white">Baja Bhais</a>
+              </div>
+              <style>
+                .nav>li>a,.nav>li>a>i{
+                  color:white!important;
+                }
+              </style>
+              <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="legacy.html"><i class="fa fa-flag-checkered"></i> Legacy</a></li>
+                  <li><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                  <li><a href="specs.html"><i class="fa fa-gears"></i> Specs</a></li>
+                  <li class="active"><a href="gallery.html"><i class="fa fa-photo"></i> Gallery</a></li>
+                  <li><a href="sponsors.html"><i class="fa fa-handshake-o"></i> Sponsors</a></li>
+                  <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+              </ul>
+              </div>
+          </div>
+      </nav>
+      <style>
+        p{
+          font-size: 120%;
+          text-indent: 20px;
+          line-height: 150%;
+          letter-spacing: 2px;
+          margin: 10px 0px 15px 0px;
+          text-align: justify
+        }
+        #container1{
+          width: 100%;
+          position: relative;
+          display: block;
+          left: 0;
+          padding-bottom: 40px;
+          margin-top: 60px;
+        }
+        .title{
+          margin-top:20px;
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 500%;
+          color: white;
+        }
+        .topLine{
+          border-top: 2px solid red;
+        }
+        .underLine{
+          border-bottom: 2px solid red;
+        }
+        .col>p{
+          margin:5px 5px 5px 5px;
+        }
+        .col{
+          margin:0px!important;
+          padding:0px!important;
+          border: 0px cyan solid;
+        }
+        @media only screen and (max-width: 767px){
+          .title{
+            font-size: 300%;
+          }
+        }
+      </style>
+      <style>
+            #container2{
+              width: 100%;
+              position:relative;
+              display: block;
+            }
+            .img-responsive{
+              width: 100%;
+            }
+            .card{
+                background: black;
+                height: 90%;
+                text-align: center;
+                width:99%!important;
+                margin:5px 0.5% 5px 0.5%;
+                border: none;
+                padding-bottom: 20px;
+                transition:ease 1s;
+            }
+            .card>img{
+              width:50%;
+              margin: auto;
+            }
+            .card>h1{
+              color:rgb(255, 208, 0);
+              display: inline-block;
+              font-family: lato;
+              text-transform: uppercase;
+              padding-top: 20px;
+              font-size: 200%;
+            }
+            .card>h3{
+                font-family:renner;
+                color: white;
+                font-size:150%;
+            }
+            .card:hover{
+                cursor: pointer;
+            }
+            .superScript{
+                text-transform:
+            }
+            .card{
+                
+            }
+            #bg{
+                background: url(image/slider/2.jpg);
+                position: fixed;
+                top:0;
+                background-size: cover;
+                width: 100%;
+                height: 100%!important;
+                z-index: -1;
+            }
+            .overlay{
+                background: rgba(0,0,0,1);
+                opacity: 0.5;
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            .titleContainer{
+                background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0))
+            }
+            .card:hover{
+                background: rgba(0,0,0,0.1);
+                background: rgba(255, 0, 0, 0.1);
+                transition: 0.5s;
+            }
+          </style>
+          <script>
+              $(document).ready(function(){
+                $(".card").addClass("hvr-grow");
+              })
+            </script>
+    <div class="container-fluid">
+            <div></div>
+    </div>
+    <style>
+        #container1 .titleContainer{
+            background: none!important;
+        }
+        #container1 .title{
+            color: black;
+        }
+        .subTitle{
+            font-family: timeless;
+            text-align: center;
+            border-bottom: 1.5px solid orangered;
+            border-top: 2.5px solid orangered;
+            display: inline-block;
+        }
+        .subTitleContainer
+        {
+            text-align: center;
+        }
+        .specs ul{
+            list-style: none;
+            text-indent: 0px;
+            text-align: left!important;
+            padding: 0;
+        }
+        .subTitleContainer>h3{
+            text-decoration: underline;
+            text-decoration-color: orange;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .subSubTitleContainer{
+            width:100%;
+            text-align: center;
+        }
+        .subSubTitleContainer>h3{
+            border-bottom: 1.5px orange solid;
+            display: inline-block;
+        }
+        .col-spec-container h5{
+            font-size: 115%;
+            margin-left: 15px;
+            margin-right:  15px;
+        }   
+        .col-spec{
+        }
+        #container1 .img-responsive{
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <div class="container-fluid" id="container1">
+        <div class="row" style="margin-bottom:30px;">
+            <div class="col-xs-12">
+                <h1 class="title"><span class="topLine">G</span>aller<span class="underLine">y</span></h1>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-3 col-sm-3">
+                <img src="image/slider/1.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3">
+                <img src="image/slider/1.jpg" class="img-responsive">
+                <img src="image/slider/2.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3">
+                <img src="image/slider/1.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-md-3 col-sm-3">
+                <img src="image/slider/1.jpg" class="img-responsive">
+            </div>
+        </div>
+
+    </div>      
+      <style>
+        .container-fluid{
+          width:100%;
+        }
+        #container4{
+          position:relative;
+          background: radial-gradient(rgb(255, 255, 255),rgb(212, 212, 212));
+          background: linear-gradient(to bottom,rgb(212,212,212),rgb(255,255,255));
+          height: 50%;
+        }
+      </style>
+      <div class="container-fluid footer">
+          <div class="row">
+              <div class="col col-xs-12">
+                  <h4>&copy 2018 Baja Bhais - PSG Motorsport. All rights reserved | Design by <span class="fRed">Baja Bhais</span></h4>
+              </div>
+          </div>
+      </div>
+      </body>
+  </html>
